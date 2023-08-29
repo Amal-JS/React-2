@@ -1,6 +1,6 @@
 In this project we are gonna cover function based components , 
 
-===================================================================================
+===========================================================================
 
 Day 1 :
 
@@ -135,4 +135,21 @@ Here's a simplified overview of how the process works:
           output and compares it to the previous output. If there's a 
           difference, React updates the corresponding portion of the actual DOM.
 
---------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+
+Day 2 -
+
+----------------------------------------------------------------------------------------------------------
+
+Today we are gonna create a home , header , counter component 
+
+in which when you click on header component headers it will take you to certain page
+
+counter component : increment and decrement a value and there is two button which used with state to change color to inner div 
+
+created multiple setState() inside the counter component
+
+header component : Have some h1 heads with home counter values when clicking on that page will change 
+a function is passed using props from App.js to Header.js 
