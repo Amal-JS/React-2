@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Counter.css'
 
 
@@ -15,6 +15,40 @@ function Counter() {
 
     //console.log(c_value)
 
+    //boom effect using useEffect
+
+    const [greensignal,ChangeSignal] = useState(false)
+
+
+
+    //useEffect() return function example
+
+    // useEffect(()=>{
+        
+    //     console.log("value :",c_value)
+    //     console.log('=========================================')
+    //     return ()=>{
+    //         console.log('=========================================')
+    //         console.log('value in returning function :',c_value)
+            
+    //     }
+    // })
+
+
+    useEffect(()=>{
+        
+        ChangeSignal(false)
+        const id = setTimeout(()=>{
+            ChangeSignal(true)
+        },c_value*1000)
+
+        return ()=>{
+            clearTimeout(id);
+            
+        }
+
+
+    },[c_value])
 
     return (
 
@@ -63,6 +97,9 @@ function Counter() {
                 </div>
 
 
+            </div>
+            <div>
+        { c_value && greensignal ? <div><h1>Boooomm!!</h1></div> : null}
             </div>
 
 

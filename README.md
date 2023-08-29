@@ -153,3 +153,21 @@ created multiple setState() inside the counter component
 
 header component : Have some h1 heads with home counter values when clicking on that page will change 
 a function is passed using props from App.js to Header.js 
+
+
+==> We are  using useEffect() hook next,
+    which is simillar like ComponentDidMount , ComponentDidUpdate and ComponentWillUnmount
+
+    import useEffect from react
+    useEffect takes two argument - a function and a array
+
+    when you didn't pass the second argument then the function will be called always 
+    when we use useEffect we don't want it to be in all render() so for that pass what are the values you need this function for ==> [value1 , value2 , .......]
+
+
+    useEffect function won't return any thing. But we can return a function . But this function will be called the next time when state change and after that the function will be called
+    to see that see the console in counter component
+
+    useEffect can be used in function component any number of times 
+
+    ==>useEffect(()=>{ }, [] ) -- will not be called once  because array is empty
